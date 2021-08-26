@@ -68,7 +68,7 @@ app.route("/articles/:articleTitle")
 
     )
 }).patch(function(req, res) {
-    Article.updateOne({ author: req.params.articleTitle }, { $set: req.body }, { overwrite: true }, function(err) {
+    Article.updateOne({ author: req.params.articleTitle }, { $set: req.body }, function(err) {
         if (err) {
             console.log(err);
         } else {
